@@ -2,7 +2,7 @@
 
 `Kotlin` is a cool language, not just working in Android. It also can be used to develop Spring Boot, as it has a good interop with Java.
 
-1. 用idea 建立 maven 的spring 工程。
+1. 用idea 建立 maven的spring boot initializer 工程, 语言选择kotlin。
 
 2. 建立数据表mysql   yzm -> user  表
 
