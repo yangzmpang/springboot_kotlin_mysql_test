@@ -31,12 +31,17 @@ data class UserInfo(var id: Long=0, var name: String="", var pwd: String="")
 // 定义mapper
 
 @Mapper
+
 interface UserMapper {
+
     @Select("select id, name, pwd from user where id=#{userInfo.id}")
+    
     fun queryUser(@Param("userInfo") userInfo: UserInfo): List<UserInfo>
 
     @Insert("insert into user (name, pwd) values (#{userInfo.name}, #{userInfo.pwd})")
+    
     fun addUser(@Param("userInfo") userInfo: UserInfo): Int
+    
 }
 
 5. 
@@ -44,16 +49,23 @@ interface UserMapper {
 // 实现 service:
 
 @Service
+
 class UserServiceImpl:IUser {
+
     @Autowired
+    
     lateinit var userMapper: UserMapper
 
     override fun queryUser(userInfo: UserInfo): List<UserInfo> {
+    
         return userMapper.queryUser(userInfo)
+        
     }
 
     override fun addUser(userInfo: UserInfo): Int {
+    
         return userMapper.addUser(userInfo);
+        
     }
 }
 
