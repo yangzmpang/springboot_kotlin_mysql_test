@@ -3,7 +3,6 @@
 ## 主要功能
 
 * 这个例子用了mysql来存储数据表，用kolin来写访问数据库的操作。
-* 数据存储时用了注解的方式
 * 语言 kotlin
 * 数据库 mysql
 * 访问方式 control 直接用 url 访问
@@ -55,6 +54,7 @@ class UserServiceImpl:IUser {
     }
 }
 ```
+
 6. 调用增加用户
 ```javascript
 运行时增加用户： 
