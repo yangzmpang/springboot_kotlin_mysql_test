@@ -8,6 +8,19 @@
 * 访问方式 control 直接用 url 访问
 * 数据访问用 mybatis 的注解方式实现
 
+## 数据配置
+```
+server:
+  port: 8888
+
+spring:
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/yzm
+    username: root
+    password: 123456
+```
+
 ## 实现过程
 
 1. 用idea 建立 maven的spring boot initializer 工程, 语言选择kotlin。
