@@ -21,15 +21,32 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
 
 3. 
+
 // 生成对应的实体类
 data class UserInfo(var id: Long=0, var name: String="", var pwd: String="")
 
+4. 
+
+// 定义mapper
+
+@Mapper
+interface UserMapper {
+    @Select("select id, name, pwd from user where id=#{userInfo.id}")
+    fun queryUser(@Param("userInfo") userInfo: UserInfo): List<UserInfo>
+
+    @Insert("insert into user (name, pwd) values (#{userInfo.name}, #{userInfo.pwd})")
+    fun addUser(@Param("userInfo") userInfo: UserInfo): Int
+}
+
+5. 
+
+// 实现 service:
 
 
-3.  运行时增加用户： 
+6.  运行时增加用户： 
 
 http://localhost:8888/user/zhang1/abc/
 
-4.  查询数据：
+7.  查询数据：
 
 http://localhost:8888/user/2
