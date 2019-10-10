@@ -8,7 +8,7 @@
 * 访问方式 control 直接用 url 访问
 * 数据访问用 mybatis 的注解方式实现
 
-## 数据配置
+## 数据配置 application.yml 文件内容
 ```
 server:
   port: 8888
