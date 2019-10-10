@@ -7,24 +7,19 @@
 1. 用idea 建立 maven的spring boot initializer 工程, 语言选择kotlin。
 
 2. 建立数据表mysql   yzm -> user  表
-
+```javascript
 CREATE TABLE `user` (
-
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  
   `name` varchar(80) NOT NULL,
-  
   `pwd` varchar(255) DEFAULT NULL,
-  
   PRIMARY KEY (`id`)
-  
 ) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
-
+```
 3. 
-
-##// 生成对应的实体类
+```javascript
+// 生成对应的实体类
 data class UserInfo(var id: Long=0, var name: String="", var pwd: String="")
-
+```
 4. 
 ```javascript
 // 定义mapper
@@ -37,30 +32,22 @@ interface UserMapper {
 }
 ```
 5. 
-
+```javascript
 // 实现 service:
-
 @Service
-
 class UserServiceImpl:IUser {
-
     @Autowired
-    
     lateinit var userMapper: UserMapper
 
     override fun queryUser(userInfo: UserInfo): List<UserInfo> {
-    
         return userMapper.queryUser(userInfo)
-        
     }
 
     override fun addUser(userInfo: UserInfo): Int {
-    
         return userMapper.addUser(userInfo);
-        
     }
 }
-
+```
 6.  运行时增加用户： 
 
 http://localhost:8888/user/zhang1/abc/
