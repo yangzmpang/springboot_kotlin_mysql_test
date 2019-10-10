@@ -60,7 +60,7 @@ http://localhost:8888/user/zhang1/abc/
 http://localhost:8888/user/2
 ```
 
-##关于作者
+## 关于作者
 
 ```javascript
   var ihubo = {
