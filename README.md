@@ -20,6 +20,11 @@ CREATE TABLE `user` (
   
 ) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
 
+3. 
+// 生成对应的实体类
+data class UserInfo(var id: Long=0, var name: String="", var pwd: String="")
+
+
 
 3.  运行时增加用户： 
 
