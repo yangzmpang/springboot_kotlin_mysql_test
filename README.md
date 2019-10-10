@@ -42,6 +42,19 @@ interface UserMapper {
 
 // 实现 service:
 
+@Service
+class UserServiceImpl:IUser {
+    @Autowired
+    lateinit var userMapper: UserMapper
+
+    override fun queryUser(userInfo: UserInfo): List<UserInfo> {
+        return userMapper.queryUser(userInfo)
+    }
+
+    override fun addUser(userInfo: UserInfo): Int {
+        return userMapper.addUser(userInfo);
+    }
+}
 
 6.  运行时增加用户： 
 
