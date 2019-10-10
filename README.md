@@ -63,8 +63,7 @@ http://localhost:8888/user/2
 ## 关于作者
 
 ```javascript
-  var ihubo = {
-    nickName  : "杨子民",
-    name: "yangzmpang"
+    Name  : "杨子民",
+    nickname: "yangzmpang"
     mail : "yangzmpang@sina.com"
-  }
+```
