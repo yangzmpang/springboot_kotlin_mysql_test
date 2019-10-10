@@ -1,8 +1,9 @@
 # Kotlin Spring Boot
 
-`Kotlin` is a cool language, not just working in Android. It also can be used to develop Spring Boot, as it has a good interop with Java.
+## 主要功能
 
-这个例子用了 mysql 来存储数据表，用kolin来写访问数据库的操作。
+* 这个例子用了 mysql 来存储数据表，用kolin来写访问数据库的操作。
+* 数据存储时用了注解的方式
 
 1. 用idea 建立 maven的spring boot initializer 工程, 语言选择kotlin。
 
