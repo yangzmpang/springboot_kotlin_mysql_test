@@ -59,3 +59,12 @@ http://localhost:8888/user/zhang1/abc/
 查询数据：
 http://localhost:8888/user/2
 ```
+
+##关于作者
+
+```javascript
+  var ihubo = {
+    nickName  : "杨子民",
+    name: "yangzmpang"
+    mail : "yangzmpang@sina.com"
+  }
