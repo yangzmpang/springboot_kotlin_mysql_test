@@ -26,8 +26,8 @@ CREATE TABLE `user` (
 data class UserInfo(var id: Long=0, var name: String="", var pwd: String="")
 
 4. 
-
-## // 定义mapper
+```javascript
+// 定义mapper
 @Mapper
 interface UserMapper {
     @Select("select id, name, pwd from user where id=#{userInfo.id}")
@@ -35,7 +35,7 @@ interface UserMapper {
     @Insert("insert into user (name, pwd) values (#{userInfo.name}, #{userInfo.pwd})")
     fun addUser(@Param("userInfo") userInfo: UserInfo): Int
 }
-
+```
 5. 
 
 // 实现 service:
