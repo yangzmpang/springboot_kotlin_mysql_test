@@ -22,26 +22,18 @@ CREATE TABLE `user` (
 
 3. 
 
-// 生成对应的实体类
-
+##// 生成对应的实体类
 data class UserInfo(var id: Long=0, var name: String="", var pwd: String="")
 
 4. 
 
-// 定义mapper
-
+## // 定义mapper
 @Mapper
-
 interface UserMapper {
-
     @Select("select id, name, pwd from user where id=#{userInfo.id}")
-    
     fun queryUser(@Param("userInfo") userInfo: UserInfo): List<UserInfo>
-
     @Insert("insert into user (name, pwd) values (#{userInfo.name}, #{userInfo.pwd})")
-    
     fun addUser(@Param("userInfo") userInfo: UserInfo): Int
-    
 }
 
 5. 
