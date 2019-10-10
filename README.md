@@ -2,8 +2,14 @@
 
 ## 主要功能
 
-* 这个例子用了 mysql 来存储数据表，用kolin来写访问数据库的操作。
+* 这个例子用了mysql来存储数据表，用kolin来写访问数据库的操作。
 * 数据存储时用了注解的方式
+* 语言 kotlin
+* 数据库 mysql
+* 访问方式 control 直接用 url 访问
+* 数据访问用 mybatis 的注解方式实现
+
+## 实现过程
 
 1. 用idea 建立 maven的spring boot initializer 工程, 语言选择kotlin。
 
